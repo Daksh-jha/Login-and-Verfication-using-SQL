@@ -80,13 +80,13 @@ otp = generate_otp()
 
 
 def send_otp(email):
-    from_ = 'sisodiabittu9@gmail.com'
+    from_ = '{Email}'
     to = email
     msg = MIMEMultipart()
     msg['From'] = from_
     msg['To'] = email
-    msg['Subject'] = 'New Mail Generated'
-    pwd = 'nlumcyrsnwzmjuss'
+    msg['Subject'] = 'OTP From LogOn'
+    pwd = '{App Generated Password}'
     text = f'''
          This is your One Time Password {otp}
     '''
