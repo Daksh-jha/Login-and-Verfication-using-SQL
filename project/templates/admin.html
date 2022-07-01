@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/css/admin.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="navbar">
+      <h2>LogOn</h2>
+      <div class="option">
+        <a href="{{url_for('home_page')}}"> Home Page </a>
+        <a href="#"> Admin </a>
+        <a href="{{url_for('home_page')}}"> Log Out </a>
+      </div>
+    </div>
+
+    <div class="user">
+      {%for d in data %}
+      <table cellspacing="30px">
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Password</td>
+        </tr>
+        <tr>
+          <td>{{d[1]}}</td>
+          <td>{{d[2]}}</td>
+          <td>{{d[3]}}</td>
+        </tr>
+      </table>
+      {%endfor%}
+    </div>
+    <footer>
+      <p><small>@Copyright Tania Mam</small></p>
+    </footer>
+    <script src="" async defer></script>
+  </body>
+</html>
