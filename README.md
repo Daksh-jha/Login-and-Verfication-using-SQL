@@ -1,4 +1,4 @@
-# python_workshop-
+# Login and Verification System Using SQL
 
 
 To run the project run app.py
